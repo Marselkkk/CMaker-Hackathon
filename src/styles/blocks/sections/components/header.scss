@@ -1,11 +1,47 @@
 header {
-    position: sticky;
+    position: fixed;
     z-index: 47;
-    top: -1px;
+    top: 2rem;
     transform: translateY(0);
     transition: transform 0.3s ease;
-    width: 100%;
+    width: calc(100% - 4rem);
+    margin: 0 2rem;
     &_sticky-hidden {
         transform: translateY(-100%);
+    }
+    .header-section {
+        @include df_jb_ac;
+        padding-left: 1rem;
+        border-radius: 10rem;
+        background-color: #fff;
+        &__logo {
+            @include df_ac;
+            gap: 1rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            svg {
+                max-width: 2.25rem;
+                max-height: 2.25rem;
+                @include wh-100;
+            }
+        }
+        &__nav-panel {
+            ul {
+                @include df_ac;
+                gap: 2.625rem;
+                li a {
+                    color: #71717A;
+                    font-size: 1.25rem;
+                }
+            }
+        }
+        &__button-block {
+            @include df_ac;
+            gap: 2rem;
+        }
+        &__socials {
+            @include df_ac;
+            gap: .5rem;
+        }
     }
 }

@@ -21,8 +21,8 @@ body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    // color: ;
-    // font-family: ;
+    color: #000;
+    font-family: 'Graphik LCG Super Regular', sans-serif;
 }
 
 main {
@@ -51,6 +51,7 @@ fieldset {
 a {
     cursor: pointer;
     text-decoration: none;
+    color: #000;
 }
 ul {
     list-style: none;
@@ -65,4 +66,13 @@ input {
     padding: 0;
     border: none;
     outline: none;
+}
+button {
+    font-family: 'Graphik LCG Super Regular', sans-serif;
+}
+
+section {
+    background-color: #F4F4F5;
+    border-radius: 2rem;
+    margin: 1rem 1rem 0 1rem;
 }

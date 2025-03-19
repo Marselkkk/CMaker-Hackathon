@@ -1,0 +1,13 @@
+.button {
+    padding: 1.5rem 3rem;
+    border-radius: 10rem;
+    outline: 1px solid #6366F1;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #6366F1;
+    &_accent {
+        outline: none;
+        background-color: #6366F1;
+        color: #ffffff;
+    }
+}
