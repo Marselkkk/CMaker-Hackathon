@@ -94,11 +94,12 @@ p {
   margin: 0;
 }
 
-input {
+input, textarea {
   margin: 0;
   padding: 0;
   border: none;
   outline: none;
+  resize: none;
 }
 
 button {
@@ -910,6 +911,94 @@ header .header-section__socials {
   display: flex;
   align-items: center;
   gap: 0.375rem;
+}
+
+.feedback-section__container {
+  padding: 6.25rem;
+  border-radius: 5rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6.25rem;
+}
+.feedback-section__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4.375rem;
+  font-weight: 600;
+  width: 100%;
+}
+.feedback-section__title__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.feedback-section__form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.feedback-section__form__label-block {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+.feedback-section__form__label-block .field {
+  display: flex;
+  padding: 0.625rem 0.625rem 2rem;
+  border-bottom: 1px solid #D4D4D8;
+}
+.feedback-section__form__label-block .field input, .feedback-section__form__label-block .field textarea {
+  font-size: 1.5rem;
+  width: 100%;
+}
+.feedback-section__form__label-block .field:has(textarea) {
+  height: 9.125rem;
+  grid-column: span 3;
+}
+.feedback-section__form .button {
+  width: fit-content;
+}
+
+.office-section__container {
+  padding: 6rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 12rem;
+}
+.office-section__map {
+  width: 50rem;
+  height: 37.5rem;
+  flex-grow: 1;
+  border-radius: 3.125rem;
+  overflow: hidden;
+}
+.office-section span {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.office-section__info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 43.75rem;
+}
+.office-section__title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.25rem;
+}
+.office-section__title-block span {
+  font-size: 4rem;
+  font-weight: 600;
+}
+.office-section .button {
+  background-color: #27272A;
+  outline: 0;
+  border-radius: 1.5625rem;
+  color: #fff;
 }
 
 /*# sourceMappingURL=main.css.map */

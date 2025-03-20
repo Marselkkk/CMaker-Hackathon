@@ -61,11 +61,12 @@ ul {
 p {
     margin: 0;
 }
-input {
+input, textarea {
     margin: 0;
     padding: 0;
     border: none;
     outline: none;
+    resize: none;
 }
 button {
     font-family: 'Graphik LCG Super Regular', sans-serif;

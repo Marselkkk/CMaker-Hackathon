@@ -11,6 +11,7 @@ import * as pages from './modules/pages/index.js';
 
 import { header } from './modules/header.js';
 import { slider } from './modules/slider.js';
+import { map } from './modules/map.js';
 
 
 
@@ -25,3 +26,4 @@ validation()
 
 header()
 slider()
+map()
