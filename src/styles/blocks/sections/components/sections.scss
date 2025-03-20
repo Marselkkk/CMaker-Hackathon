@@ -371,3 +371,58 @@
     }
 }
 
+.reviews-section {
+    &__container {
+        padding: 10.625rem;
+        @include df_fdc_ac;
+        gap: 6rem;
+    }
+    &__title {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    &__reviews {
+        max-width: 100%;
+        .reviews_slider {
+            .reviews-pagination {
+                @include df_ac_jcc;
+                margin-top: 2.5rem;
+                .swiper-pagination-bullet {
+                    height: 0.625rem;
+                    width: 4.5rem;
+                    border-radius: 11.4375rem;
+                    &.swiper-pagination-bullet-active {
+                        background-color: #6366F1;
+                    }
+                }
+            }
+        }
+        .review-card {
+            @include df_fdc_ac;
+            gap: 1.25rem;
+            font-size: 1.375rem;
+            padding: 3.125rem 1.25rem 3.125rem 1.25rem;
+            border-radius: 3.125rem;
+            background-color: #fff;
+            text-align: center;
+
+            position: relative;
+            &__avatar {
+                max-height: 9.375rem;
+                aspect-ratio: 1 / 1;
+                img {
+                    @include image_cover;
+                }
+            }
+            span {
+                font-size: 2.25rem;
+                font-weight: 600;
+            }
+            &__rating {
+                @include df_ac;
+                gap: .375rem;
+            }
+        }
+    }
+}
+

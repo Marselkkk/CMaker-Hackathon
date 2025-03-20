@@ -4,10 +4,19 @@ export function slider() {
         spaceBetween: getRem() * 2.63,
         freeMode: true,
     });
-    const help_sliderlider = new Swiper('.help_slider', {
+    const helpSlider = new Swiper('.help_slider', {
         slidesPerView: 3,
         spaceBetween: getRem() * 1.5,
         freeMode: true,
+    });
+    const reviewsSlider = new Swiper('.reviews_slider', {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: getRem() * 8,
+        pagination: {
+            el: ".reviews-pagination",
+            clickable: true,
+        },
     });
 
     function getRem() {
