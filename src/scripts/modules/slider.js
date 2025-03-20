@@ -3,7 +3,7 @@ export function slider() {
         slidesPerView: 1,
         spaceBetween: getRem() * 2,
         freeMode: true,
-        breakpoint: {
+        breakpoints: {
             768: {
                 slidesPerView: 3,
                 spaceBetween: getRem() * 2.63,
@@ -15,7 +15,7 @@ export function slider() {
         slidesPerView: 1,
         spaceBetween: getRem() * 1.5,
         freeMode: true,
-        breakpoint: {
+        breakpoints: {
             768: {
                 slidesPerView: 3,
                 spaceBetween: getRem() * 2.63,
@@ -26,7 +26,7 @@ export function slider() {
     const reviewsSlider = new Swiper('.reviews_slider', {
         slidesPerView: 1,
         spaceBetween: getRem() * 8,
-        breakpoint: {
+        breakpoints: {
             768: {
                 slidesPerView: 3,
                 slidesPerGroup: 3,
