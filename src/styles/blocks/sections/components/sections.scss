@@ -2,12 +2,19 @@
     &__container {
         @include grid(4, 1.25rem);
         padding: 6.5625rem 1rem 1rem 8rem;
+        @include mobile {
+            padding: 10.6667rem 2rem 2rem;
+        }
     }
     &__info-block {
         grid-column: span 2;
         @include df_fdc_jcc;
         align-items: flex-start;
         gap: 4rem;
+        @include mobile {
+            grid-column: span 4;
+            gap: 2.6667rem;
+        }
         span {
             font-size: 3rem;
             font-weight: 600;
@@ -16,6 +23,10 @@
     &__button-block {
         @include df_fdc;
         gap: 1rem;
+        @include mobile {
+            width: 100%;
+            gap: 2.6667rem;
+        }
         &__socials {
             @include df_ac;
             gap: .875rem;
@@ -27,6 +38,9 @@
         border-radius: 1rem;
         max-height: 58.25rem;
         aspect-ratio: 1;
+        @include mobile {
+            display: none;
+        }
     }
 }
 
@@ -35,16 +49,26 @@
         padding: 4rem 19.625rem 8rem;
         @include df_fdc_ac;
         gap: 6rem;
+        @include mobile {
+            padding: 2rem;
+        }
     }
     &__title {
         font-size: 1.875rem;
         text-align: center;
         max-width: 50%;
+        @include mobile {
+            max-width: none;
+        }
     }
     &__info-block {
         display: flex;
         align-items: flex-start;
         gap: 3rem;
+        @include mobile {
+            flex-direction: column;
+            gap: 2rem;
+        }
     }
     &__card {
         @include df_fdc_ac;
@@ -78,10 +102,19 @@
         padding: 4rem 0;
         @include df_fdc_ac;
         gap: 6rem;
+        .button {
+            @include mobile {
+                max-width: 24.5833rem;
+                width: 100%;
+            }
+        }
     }
     &__title {
         font-size: 4rem;
         font-weight: bold;
+        @include mobile {
+            font-size: 2.6667rem;
+        }
     }
     &__info-block {
         max-width: 100%;
@@ -101,6 +134,9 @@
         padding: 6rem 0;
         @include df_fdc_ac;
         gap: 6rem;
+        @include mobile {
+            padding: 2rem;
+        }
     }
     &__title {
         font-size: 4rem;
@@ -110,18 +146,31 @@
         display: flex;
         align-items: flex-start;
         gap: 2.625rem;
+        @include mobile {
+            flex-direction: column;
+        }
     }
     &__item {
         @include df_fdc_ac;
         gap: 1.5rem;
         max-width: 12rem;
         width: 100%;
+        @include mobile {
+            max-width: none;
+        }
         &__icon {
             max-height: 12rem;
             aspect-ratio: 1;
+            @include mobile {
+                max-height: 20.4167rem;
+            }
             svg {
                 width: 12rem;
                 height: 12rem;
+                @include mobile {
+                    width: 20.4167rem;
+                    height: 20.4167rem;
+                }
             }
         }
         &__title {
@@ -137,11 +186,17 @@
         padding: 6rem 9.375rem;
         @include df_fdc_ac;
         gap: 6rem;
+        @include mobile {
+            padding: 2rem;
+        }
     }
     &__title {
         font-size: 4rem;
         font-weight: bold;
-
+        @include mobile {
+            font-size: 2.6667rem;
+            text-align: center;
+        }
     }
     &__info-block {
         @include df_fdc;
@@ -150,8 +205,14 @@
             @include df_ac;
             gap: 2.5rem;
             align-items: stretch;
+            @include mobile {
+                @include df_fdc;
+            }
             &:last-of-type {
                 padding: 0 5.75rem;
+                @include mobile {
+                    padding: 0;
+                }
             }
         }
         &__card {
@@ -173,15 +234,25 @@
     &__container {
         @include df_fdc_ac;
         gap: 6rem;
-        padding: 6rem
+        padding: 6rem;
+        @include mobile {
+            padding: 2rem;
+            gap: 2.6667rem;
+        }
     }
     &__title {
         font-size: 4rem;
         font-weight: bold;
+        @include mobile {
+            font-size: 2.6667rem;
+        }
     }
     &__info-cards {
         @include df_ac;
         gap: 3.25rem;
+        @include mobile {
+            @include df_fdc_ac;
+        }
     }
     &__card {
         @include df_fdc;
@@ -219,10 +290,17 @@
             grid-column: span 2;
             @include image_cover;
             border-radius: 3.125rem;
+            @include mobile {
+                display: none;
+            }
         }
         &__info-cards {
             grid-column: span 2;
             @include grid(2, 1.25rem);
+            @include mobile {
+                @include df_fdc_ac;
+                grid-column: span 4;
+            }
         }
         &__info-card {
             @include df_fdc;
@@ -264,14 +342,25 @@
         @include df_fdc_ac;
         gap: 6rem;
         padding: 1rem 6rem 6rem;
+        @include mobile {
+            gap: 2.6667rem;
+            padding: 2rem;
+        }
     }
     &__title {
         font-size: 4rem;
         font-weight: bold;
+        @include mobile {
+            font-size: 2.6667rem;
+        }
     }
     &__info-block {
         @include df_ac;
         gap: 3.125rem;
+        @include mobile {
+            flex-direction: column;
+            gap: 1.6667rem;
+        }
         align-items: stretch;
         &__item {
             @include df_fdc;
@@ -292,6 +381,9 @@
         overflow: hidden;
         max-height: 43.4375rem;
         width: 100%;
+        @include mobile {
+            display: none;
+        }
         img {
             @include wh-100;
             object-fit: cover;
@@ -304,13 +396,24 @@
         @include df_fdc_ac;
         gap: 6rem;
         padding: 1rem 6rem;
+        @include mobile {
+            padding: 2rem;
+            gap: 2rem;
+        }
     }
     &__title {
         font-size: 4rem;
         font-weight: 600;
+        @include mobile {
+            font-size: 2.6667rem;
+        }
     }
     &__info-block {
         @include grid(3, 1.875rem);
+        @include mobile {
+            @include df_fdc;
+            gap: 1.5rem;
+        }
     }
 }
 
@@ -337,10 +440,17 @@
         padding: 1rem 0 6rem 0;
         @include df_fdc_ac;
         gap: 6rem;
+        @include mobile {
+            padding: 2rem 0;
+        }
     }
     &__title {
         font-size: 4rem;
         font-weight: 600;
+        @include mobile {
+            font-size: 2.6667rem;
+            text-align: center;
+        }
     }
     &__info-block {
         max-width: 100%;
@@ -359,10 +469,17 @@
         @include df_fdc_ac;
         gap: 6rem;
         padding: 6rem 0;
+        @include mobile {
+            padding: 2rem;
+        }
     }
     &__title {
         font-size: 4rem;
         font-weight: 600;
+        @include mobile {
+            font-size: 2.67rem;
+            text-align: center;
+        }
     }
     img {
         max-height: 43.3125rem;
@@ -376,10 +493,17 @@
         padding: 10.625rem;
         @include df_fdc_ac;
         gap: 6rem;
+        @include mobile {
+            padding: 2rem;
+        }
     }
     &__title {
         font-size: 4rem;
         font-weight: 600;
+        @include mobile {
+            font-size: 2.67rem;
+            text-align: center;
+        }
     }
     &__reviews {
         max-width: 100%;
@@ -433,12 +557,20 @@
         background-color: #fff;
         @include df_fdc;
         gap: 6.25rem;
+        @include mobile {
+            padding: 2rem;
+            gap: 2.67rem; 
+            border-radius: 1.6667rem;
+        }
     }
     &__title {
         @include df_jb_ac;
         font-size: 4.375rem;
         font-weight: 600;
         width: 100%;
+        @include mobile {
+            display: none;
+        }
         &__socials {
             @include df_fdc;
             gap: 1.5rem;
@@ -453,6 +585,9 @@
                 display: flex;
                 padding: 0.625rem 0.625rem 2rem;
                 border-bottom: 1px solid #D4D4D8;
+                @include mobile {
+                    grid-column: span 3;
+                }
                 input, textarea {
                     font-size: 1.5rem;
                     width: 100%;
@@ -465,6 +600,9 @@
         }
         .button {
             width: fit-content;
+            @include mobile {
+                width: 100%;
+            }
         }
     }
 }
@@ -475,6 +613,9 @@
         display: flex;
         align-items: flex-start;
         gap: 12rem;
+        @include mobile {
+            padding: 2rem;
+        } 
     }
     &__map {
         width: 50rem;
@@ -482,6 +623,9 @@
         flex-grow: 1;
         border-radius: 3.125rem;
         overflow: hidden;
+        @include mobile {
+            display: none;
+        }
     }
     span {
         font-size: 1.25rem;
@@ -499,6 +643,9 @@
         span {
             font-size: 4rem;
             font-weight: 600;
+            @include mobile {
+                font-size: 2.67rem;
+            }
         }
     }
     .button {
@@ -506,6 +653,100 @@
         outline: 0;
         border-radius: 1.5625rem;
         color: #fff;
+    }
+}
+
+footer {
+    background-color: #4F46E5;
+    border-radius: 2rem;
+    margin: 1rem 1rem 1rem 1rem;
+    .footer-section {
+        &__container {
+            padding: 8rem;
+            display: flex;
+            gap: 8rem;
+            @include mobile {
+                padding: 2rem;
+            }
+        }
+        &__info-block {
+            span {
+                color: #fff;
+                font-size: 4rem;
+                font-weight: 600;
+            }
+            &__contacts {
+                @include df_fdc;
+                gap: 1.25rem;
+                font-size: 1.25rem;
+                color: #E0E7FF;
+                max-width: 27.1875rem;
+                width: 100%;
+                hr {
+                    border: 0;
+                    border-bottom: 1px solid #A5B4FC;
+                }
+            }
+            &__socials {
+                @include df_ac;
+                gap: 1.25rem;
+            }
+        }
+        &__profile {
+            @include df_ac;
+            gap: 1rem;
+            &__avatar {
+                max-height: 4.875rem;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    @include image_cover;
+                }
+            }
+            &__title-block {
+                @include df_fdc;
+                font-size: 1.5rem;
+                font-weight: 600;
+                span {
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                }
+            }
+        }
+        &__form {
+            @include df_fdc_ac;
+            gap: 2rem;
+            font-size: 1rem;
+            color: #E0E7FF;
+            @include mobile {
+                display: none;
+            }
+            &__label-block {
+                @include grid(2, 1rem);
+                .field {
+                    padding: 1.5rem 2rem;
+                    background-color: #fff;
+                    border-radius: 10rem;
+                    color: #A1A1AA;
+                    &:nth-of-type(3),
+                    &:nth-of-type(4) {
+                        grid-column: span 2;
+                    }
+                    input {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            button {
+                background-color: #27272A;
+                color: #fff;
+                width: 100%;
+            }
+            span {
+                font-size: 1.25rem;
+            }
+        }
     }
 }
 

@@ -1,22 +1,42 @@
 export function slider() {
     const portfolioSlider = new Swiper('.portfolio_slider', {
-        slidesPerView: 3,
-        spaceBetween: getRem() * 2.63,
+        slidesPerView: 1,
+        spaceBetween: getRem() * 2,
         freeMode: true,
+        brealpoint: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: getRem() * 2.63,
+                freeMode: true,
+            }
+        }
     });
     const helpSlider = new Swiper('.help_slider', {
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: getRem() * 1.5,
         freeMode: true,
+        brealpoint: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: getRem() * 2.63,
+                freeMode: true,
+            }
+        }
     });
     const reviewsSlider = new Swiper('.reviews_slider', {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
+        slidesPerView: 1,
         spaceBetween: getRem() * 8,
-        pagination: {
-            el: ".reviews-pagination",
-            clickable: true,
-        },
+        brealpoint: {
+            768: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: getRem() * 8,
+                pagination: {
+                    el: ".reviews-pagination",
+                    clickable: true,
+                },
+            }
+        }
     });
 
     function getRem() {

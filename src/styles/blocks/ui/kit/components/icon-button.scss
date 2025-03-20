@@ -5,6 +5,12 @@
     border: 1px solid #6366F1;
     border-radius: 50%;
     padding: 0.625rem;
+    &_white {
+        background-color: #fff;
+        svg path {
+            fill: #4F46E5;
+        }
+    }
     svg {
         max-width: 1.5rem;
         @include wh-100;
