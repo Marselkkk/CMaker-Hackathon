@@ -73,6 +73,65 @@
     }
 }
 
+.portfolio-section {
+    &__container {
+        padding: 4rem 0;
+        @include df_fdc_ac;
+        gap: 6rem;
+    }
+    &__title {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+    &__info-block {
+        max-width: 100%;
+        .swiper-slide {
+            border-radius: 1.875rem;
+            overflow: hidden;
+            img {
+                max-height: 25.25rem;
+                @include image_cover;
+            }
+        }
+    }
+}
+
+.stuff-section {
+    &__container {
+        padding: 6rem 0;
+        @include df_fdc_ac;
+        gap: 6rem;
+    }
+    &__title {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+    &__info-block {
+        display: flex;
+        align-items: flex-start;
+        gap: 2.625rem;
+    }
+    &__item {
+        @include df_fdc_ac;
+        gap: 1.5rem;
+        max-width: 12rem;
+        width: 100%;
+        &__icon {
+            max-height: 12rem;
+            aspect-ratio: 1;
+            svg {
+                width: 12rem;
+                height: 12rem;
+            }
+        }
+        &__title {
+            font-size: 1rem;
+            color: #71717A;
+            text-align: center;
+        }
+    }
+}
+
 .cases-section {
     &__container {
         padding: 6rem 9.375rem;
@@ -90,6 +149,7 @@
         &__row {
             @include df_ac;
             gap: 2.5rem;
+            align-items: stretch;
             &:last-of-type {
                 padding: 0 5.75rem;
             }
@@ -109,9 +169,99 @@
     }
 }
 
+.project-section {
+    &__container {
+        @include df_fdc_ac;
+        gap: 6rem;
+        padding: 6rem
+    }
+    &__title {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+    &__info-cards {
+        @include df_ac;
+        gap: 3.25rem;
+    }
+    &__card {
+        @include df_fdc;
+        border-radius: 1.125rem;
+        background-color: #fff;
+        overflow: hidden;
+        &__image {
+            max-height: 17.3rem;
+            aspect-ratio: 24 / 17.3;
+            img {
+                @include image_cover;
+            }
+        }
+        &__title-block {
+            padding: 1.375rem;
+            @include df_fdc;
+            gap: .5rem;
+            font-size: 0.875rem;
+            .title {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                font-size: 0.875rem;
+                font-weight: bold;
+                span {
+                    font-size: 1.375rem;
+                    color: #6366F1;
+                }
+            }
+        }
+    }
+    &__info-block {
+        @include grid(4, 3.125rem);
+        img {
+            grid-column: span 2;
+            @include image_cover;
+            border-radius: 3.125rem;
+        }
+        &__info-cards {
+            grid-column: span 2;
+            @include grid(2, 1.25rem);
+        }
+        &__info-card {
+            @include df_fdc;
+            gap: 1.25rem;
+            font-size: 1.375rem;
+            padding: 1.875rem;
+            border-radius: 3.125rem;
+            background-color: #fff;
+            span {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+            ul {
+                @include df_fdc;
+                gap: 1rem;
+                list-style: disc;
+                li {
+                    margin-left: 1.25rem;
+                    &::marker {
+                        color: #09090B;
+                    }
+                }
+            }
+            &__desc {
+                width: 100%;
+                text-align: end; 
+            }
+            &:first-of-type,
+            &:last-of-type {
+                grid-column: span 2;
+                padding: 2.5rem;
+            }
+        }
+    }
+}
+
 .team-section {
     &__container {
-        @include df_fdc;
+        @include df_fdc_ac;
         gap: 6rem;
         padding: 1rem 6rem 6rem;
     }
@@ -141,10 +291,83 @@
         border-radius: 2rem;
         overflow: hidden;
         max-height: 43.4375rem;
+        width: 100%;
         img {
             @include wh-100;
             object-fit: cover;
         }
+    }
+}
+
+.steps-section {
+    &__container {
+        @include df_fdc_ac;
+        gap: 6rem;
+        padding: 1rem 6rem;
+    }
+    &__title {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    &__info-block {
+        @include grid(3, 1.875rem);
+    }
+}
+
+.steps-card {
+    @include df_fdc;
+    gap: 0.875rem;
+    font-size: 1.5rem;
+    background-color: #fff;
+    padding: 2.375rem;
+    border-radius: 1.25rem;
+    &__number {
+        font-size: 2.375rem;
+        color: #4F46E5;
+        font-weight: 600;
+    }
+    span {
+        font-size: 2.375rem;
+        font-weight: 600;
+    }
+}
+
+.help-section {
+    &__container {
+        padding: 1rem 0 6rem 0;
+        @include df_fdc_ac;
+        gap: 6rem;
+    }
+    &__title {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    &__info-block {
+        max-width: 100%;
+        .help_slider {
+            .swiper-slide {
+                height: auto;
+                .steps-card {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+.world-section {
+    &__container {
+        @include df_fdc_ac;
+        gap: 6rem;
+        padding: 6rem 0;
+    }
+    &__title {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    img {
+        max-height: 43.3125rem;
+        max-width: 85.4375rem;
+        @include image_cover;
     }
 }
 
